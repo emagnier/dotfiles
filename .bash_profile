@@ -2,10 +2,15 @@
 export PATH="$HOME/bin:$PATH"
 
 # Add ADB to the `$PATH`
+<<<<<<< HEAD
 export PATH=${PATH}:~/Tools/SDK/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/emagnier/Tools/SDK/adt-bundle-mac-x86_64-20131030/sdk/tools
 
 # Add WebStorm to the `$PATH`
 export PATH=${PATH}:/Applications/WebStorm.app/Contents/MacOS
+=======
+export PATH=${PATH}:/Users/emagnier/Tools/SDK/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/emagnier/Tools/SDK/adt-bundle-mac-x86_64-20131030/sdk/tools
+
+>>>>>>> f253e01... Fine tuning
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
