@@ -1,6 +1,10 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
+# Add ADB to the `$PATH`
+export PATH=${PATH}:/Users/emagnier/Tools/SDK/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:/Users/emagnier/Tools/SDK/adt-bundle-mac-x86_64-20131030/sdk/tools
+
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -37,3 +41,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+# Add git completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi

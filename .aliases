@@ -7,13 +7,28 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
+alias cls="clear"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias t="cd ~/Tools"
+
+# Git Shortcuts
+alias gbranch="git branch"
+alias gb="git branch"
+alias gco="git checkout"
+alias gcommit='git commit -m'
+alias glog='git log --stat'
+alias gst='git status'
+alias gstat='git status'
+alias gpull='git pull'
+alias gp='git pull'
+alias undopush="git push -f origin HEAD^:master"
+alias gdiff="git diff"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
