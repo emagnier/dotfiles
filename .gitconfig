@@ -1,9 +1,8 @@
-[difftool "sourcetree"]
-        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-        path =
-[mergetool "sourcetree"]
-        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-        trustExitCode = true
+[mergetool "webstorm"]
+    cmd = /Applications/WebStorm.app/Contents/MacOS/webide merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+    trustExitCode = true
+[difftool "webstorm"]
+    cmd = /Applications/WebStorm.app/Contents/MacOS/webide diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
