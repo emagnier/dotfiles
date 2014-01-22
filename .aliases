@@ -18,15 +18,13 @@ alias j="jobs"
 alias t="cd ~/Tools"
 
 # Git Shortcuts
-alias gbranch="git branch"
-alias gb="git branch"
+alias gbh="git branch"
 alias gco="git checkout"
-alias gcommit='git commit -m'
+alias gcm='git commit -m'
 alias glog='git log --stat'
 alias gst='git status'
-alias gstat='git status'
-alias gpull='git pull'
-alias gp='git pull'
+alias gpl='git pull'
+alias gph='git push'
 alias undopush="git push -f origin HEAD^:master"
 alias gdiff="git diff"
 
