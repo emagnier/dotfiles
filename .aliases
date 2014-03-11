@@ -19,6 +19,7 @@ alias t="cd ~/Tools"
 
 # Git Shortcuts
 <<<<<<< HEAD
+<<<<<<< HEAD
 alias gcm='git commit -m'
 alias glog='git log --stat'
 alias gst='git status'
@@ -28,14 +29,18 @@ alias gbranch="git branch"
 alias gb="git branch"
 alias gco="git checkout"
 alias gcommit='git commit -m'
+=======
+alias gcm='git commit -m'
+>>>>>>> 602ba70... Update div/mertgool and some git aliases
 alias glog='git log --stat'
 alias gst='git status'
-alias gstat='git status'
-alias gpull='git pull'
 alias gp='git pull'
+<<<<<<< HEAD
 alias undopush="git push -f origin HEAD^:master"
 alias gdiff="git diff"
 >>>>>>> f253e01... Fine tuning
+=======
+>>>>>>> 602ba70... Update div/mertgool and some git aliases
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
