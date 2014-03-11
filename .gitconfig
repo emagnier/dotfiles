@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 602ba70... Update div/mertgool and some git aliases
 [difftool "webstorm"]
 	cmd = webide diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
 	trustExitCode = true
@@ -7,6 +10,7 @@
 	cmd = webide merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
 	trustExitCode = true
 
+<<<<<<< HEAD
 =======
 [difftool "sourcetree"]
         cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -15,6 +19,8 @@
         cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
         trustExitCode = true
 >>>>>>> f253e01... Fine tuning
+=======
+>>>>>>> 602ba70... Update div/mertgool and some git aliases
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
