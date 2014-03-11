@@ -1,8 +1,11 @@
-[mergetool "webstorm"]
-    cmd = /Applications/WebStorm.app/Contents/MacOS/webide merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
-    trustExitCode = true
 [difftool "webstorm"]
-    cmd = /Applications/WebStorm.app/Contents/MacOS/webide diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+	cmd = webide diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+	trustExitCode = true
+
+[mergetool "webstorm"]
+	cmd = webide merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+	trustExitCode = true
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -58,6 +61,12 @@
 	# Remove branches that have already been merged with master
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+	# Get the Git Commit Count
+	count = git rev-list HEAD --count
+
+	# Undo last commit
+	undocommit = git reset --soft 'HEAD^'
 
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
@@ -160,5 +169,4 @@
 	pushInsteadOf = "git://gist.github.com/"
 
 [url "git://gist.github.com/"]
-
 	insteadOf = "gist:"

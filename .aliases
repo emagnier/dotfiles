@@ -18,15 +18,9 @@ alias j="jobs"
 alias t="cd ~/Tools"
 
 # Git Shortcuts
-alias gbh="git branch"
-alias gco="git checkout"
-alias gcm='git commit -m'
 alias glog='git log --stat'
 alias gst='git status'
-alias gpl='git pull'
-alias gph='git push'
-alias undopush="git push -f origin HEAD^:master"
-alias gdiff="git diff"
+alias gb="git branch"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -152,6 +146,3 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
-
-# Faster npm for Europeans
-command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
