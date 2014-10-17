@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 602ba70... Update div/mertgool and some git aliases
 [difftool "webstorm"]
 	cmd = webide diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
 	trustExitCode = true
@@ -11,24 +6,6 @@
 	cmd = webide merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
 	trustExitCode = true
 
-<<<<<<< HEAD
-=======
-[difftool "sourcetree"]
-        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-        path =
-[mergetool "sourcetree"]
-        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-        trustExitCode = true
->>>>>>> f253e01... Fine tuning
-=======
->>>>>>> 602ba70... Update div/mertgool and some git aliases
-=======
-[mergetool "webstorm"]
-    cmd = /Applications/WebStorm.app/Contents/MacOS/webide merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
-    trustExitCode = true
-[difftool "webstorm"]
-    cmd = /Applications/WebStorm.app/Contents/MacOS/webide diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
->>>>>>> 3f26c63... Update alias and set WebStorm to the merge-diff tool
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -85,26 +62,8 @@
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
-	# Get the Git Commit Count
-	count = git rev-list HEAD --count
-
-	# Undo last commit
-	undocommit = git reset --soft 'HEAD^'
-
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
-
-	# Merge GitHub pull request on top of the `master` branch
-	mpr = "!f() { \
-		if [ $(printf \"%s\" \"$1\" | grep '^[0-9]\\+$' > /dev/null; printf $?) -eq 0 ]; then \
-			git fetch origin refs/pull/$1/head:pr/$1 && \
-			git rebase master pr/$1 && \
-			git checkout master && \
-			git merge pr/$1 && \
-			git branch -D pr/$1 && \
-			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
-		fi \
-	}; f"
 
 [apply]
 
