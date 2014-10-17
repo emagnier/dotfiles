@@ -16,6 +16,8 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias t="cd ~/Tools"
+alias nvmrc="nvm install $(cat .nvmrc)"
+alias fuck="sudo $(history -p \!\!)"
 
 # Git Shortcuts
 alias glog='git log --stat'
