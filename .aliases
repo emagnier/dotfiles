@@ -17,6 +17,7 @@ alias h="history"
 alias j="jobs"
 alias t="cd ~/Tools"
 alias fuck="sudo $(history -p \!\!)"
+alias gundocommit="git reset --soft 'HEAD^'"
 
 # Git Shortcuts
 alias glog='git log --stat'
